@@ -1,7 +1,7 @@
 Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
 Name: dmdirc
 Maintainer: Shane Mc Cormack <shane@dmdirc.com>
-Source: http://git.dmdirc.com/
+Source: http://github.com/dmdirc
 
 Copyright: 2006-2017 DMDirc Developers
 License: MIT

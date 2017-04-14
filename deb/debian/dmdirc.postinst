@@ -1,7 +1,9 @@
 #!/bin/sh
 
 if [ "configure" = "${1}" ]; then
-	update-alternatives --quiet --install /usr/share/services/irc.protocol irc.protocol /opt/dmdirc/irc.protocol 50
+	if [ -e "/usr/share/services/" ]; then
+		update-alternatives --quiet --install /usr/share/services/irc.protocol irc.protocol /opt/dmdirc/irc.protocol 50
+	fi;
 
 	# TODO: Also add to gnome
 fi;

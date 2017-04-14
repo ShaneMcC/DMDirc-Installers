@@ -1,8 +1,8 @@
 Source: dmdirc
 Priority: extra
 Maintainer: Shane Mc Cormack <shane@dmdirc.com>
-Uploaders: Chris Smith <chris@dmdirc.com>, Greg Holmes <greg@dmdirc.com>
-Build-Depends: cdbs (>= 0.4.36), debhelper (>= 7.0.50~), javahelper (>=0.25)
+Uploaders: Chris Smith <chris@dmdirc.com>, Greg Holmes <greg@dmdirc.com>, Shane Mc Cormack <shane@dmdirc.com>
+Build-Depends: cdbs (>= 0.4.36), debhelper (>= 7.0.50~), javahelper (>=0.25), gradle-debian-helper
 Build-Depends-Indep: java8-jdk, ant-optional, git-core
 Standards-Version: 3.9.0
 Vcs-Git: git://dmdirc.com/client

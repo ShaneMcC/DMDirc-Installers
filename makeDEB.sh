@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # This script will produce a deb for DMDirc.
 #
@@ -109,14 +109,13 @@ DPKGOPTS=""
 # This will produce files ready for upload to debian.
 if [ "${JAR}" = "" -o ! -e "${JAR}" ]; then
 	# Clone a copy of the repo to the temp dir
-	git clone git://dmdirc.com/client "${BUILDDIR}"
+	git clone https://github.com/DMDirc/Meta "${BUILDDIR}"
 	
 	# Change into the temp dir
 	cd "${BUILDDIR}"
 	
 	# Init the submodules
-	git submodule init
-	git submodule update
+	git submodule update --init --remote
 
 	# What version of the client is this?
 	VERSION=`git describe --tags --always`
@@ -178,7 +177,7 @@ BUILDTIME=`date -R`
 cat <<EOF >debian/changelog
 dmdirc (${DEBIANVERSION}) unstable; urgency=low
 
-  * Debian Package for DMDirc ${VERSION}, for changes see: http://git.dmdirc.com/
+  * Debian Package for DMDirc ${VERSION}, for changes see: http://github.com/dmdirc/
   * This changelog will be better in future, honest!
 
  -- DMDirc Developers <devs-public@dmdirc.com>  ${BUILDTIME}
